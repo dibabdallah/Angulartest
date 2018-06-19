@@ -1,0 +1,23 @@
+<div class="col-xs-12">
+      
+  <h2 id="demo"> Mes Posts </h2>
+ 
+  
+  <ul class="list-group">
+     
+    <app-postblog  *ngFor="let postblog of postblogs; let i = index"
+    [postblogName]="postblog.name"
+    [index]="i"
+    [id]="postblog.id">
+  </app-postblog >
+    <p>Mis à jour : {{ lastUpdate | async | date: 'yMMMMEEEEd' | uppercase }}</p>
+    
+</ul>
+  <button class="btn btn-success" 
+  [disabled]="!isAuth" 
+  (click)="onAllumer()">love it</button>
+  
+  <button class="btn btn-success" 
+  [disabled]="!isAuth" 
+  (click)="onPalover()">don't love it</button>
+</div>

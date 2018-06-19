@@ -1,0 +1,15 @@
+<li class="list-group-item">
+
+  <h4> {{ postblogName }}</h4> 
+  <a [routerLink]="[id]">Détail</a>
+  <p>Mis à jour : {{ lastUpdate | async | date: 'yMMMMEEEEd' | uppercase }}</p>
+  <p> ddd  dcn  jnjndn,q qnnqnjkcbjkcbsjksqbsjkbsjbs sqsqbbjjkbksksskjsj</p>
+
+  <button class="btn btn-sm btn-success"
+  (click)="onSwitchOn()"
+  [disabled] = "postblogName === 'allumé'">Allumer</button>
+<button class="btn btn-sm btn-danger"
+  (click)="onSwitchOff()"
+  [disabled] = "postblogName === 'eteint'">Eteindre</button>
+
+</li>
